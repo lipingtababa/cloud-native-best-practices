@@ -14,7 +14,7 @@
 
 实际上, 作为云用户, 我们对云厂家的要求更高: 状态页之外, 还要有服务运行状况 API . 
 
-这个 API 是这样帮助我们的: 我们使用 Datadog 的 Amazon Health Ingtegration 从 AWS Health API 获取及时的健康信息,
+这个 API 是这样帮助我们的: 我们使用[美国观测云 Datadog ](https://mp.weixin.qq.com/s/AvQZWLoAUb3ZMpkW_ttsPA) 的 Amazon Health Ingtegration 从 AWS Health API 获取及时的健康信息,
 然后通过 Datadog 和 Slack 的集成, 把消息发送到相关消息群.
 如果某服务的健康问题很严重, Datadog 会通过和 Opsgenie 的集成, 直接向订阅该对象的小组打电话告警, 并且生成故障单. 
 
