@@ -19,15 +19,14 @@
 
 所以, 我们可以说“文档是云服务交付过程中很关键的核心资产, 不是可有可无的点缀”. 
 
-很可惜, 我在测试领先云的时候, 没有感受到这一点, 我感受到的是一种漫不经心, 甚至可以说基本敬业精神的缺乏.
+很可惜, 我在测试阿里云的时候, 没有感受到这一点, 我感受到的是一种漫不经心, 甚至可以说基本敬业精神的缺乏.
 
 # 官方页面大量的死链接
 
-这个页面 [https://cn.aliyun.com/product/rds?from_alibabacloud=](https://cn.aliyun.com/product/rds?from_alibabacloud=) 是领先云RDS服务的官方页面, 按道理, 应该是最多访问的页面. 说出来您可能不相信, 这一个页面就有三十几个不可用的链接.
+这个页面 [https://cn.aliyun.com/product/rds?from_alibabacloud=](https://cn.aliyun.com/product/rds?from_alibabacloud=) 是阿里云RDS服务的官方页面, 按道理, 应该是最多访问的页面. 说出来您可能不相信, 这一个页面就有三十几个不可用的链接.
 
 ## 正文中的死链接
-
-页面的核心部分, ****云数据库RDS功能章节截图如下:****
+页面的核心部分, 云数据库RDS功能章节截图如下:
 
 ![Screenshot 2022-12-31 at 20.00.02.png](terribledocs%205f3ac882deae41588c99c0a79d7254b0/Screenshot_2022-12-31_at_20.00.02.png)
 
@@ -122,16 +121,13 @@ https://help.aliyun.com/product/8314883_rds.html  https://help.aliyun.com/knowle
 ![Screenshot 2022-12-31 at 21.25.48.png](terribledocs%205f3ac882deae41588c99c0a79d7254b0/Screenshot_2022-12-31_at_21.25.48.png)
 
 # 漫不经心的翻译
-
-领先云RDS文档有个有趣的[RDS与自建数据库对比优势表](https://help.aliyun.com/document_detail/41875.html), 
+阿里云RDS文档有个有趣的[RDS与自建数据库对比优势表](https://help.aliyun.com/document_detail/41875.html), 
 
 > 1个初级DBA工程师月薪至少5000/月，假设当前项目占用该工程师30%的工作量，则人员成本为5000 × 12× 30% = 18000元。
-> 
 
-这个表在领先云[国际站的中文版](https://www.alibabacloud.com/help/zh/apsaradb-for-rds/latest/competitive-advantages-of-apsaradb-rds-instances-over-self-managed-databases)就变成了
+这个表在阿里云[国际站的中文版](https://www.alibabacloud.com/help/zh/apsaradb-for-rds/latest/competitive-advantages-of-apsaradb-rds-instances-over-self-managed-databases)就变成了
 
 > 1个初级DBA工程师月薪至少$5,000/月，假设当前项目占用该工程师30%的工作量，则人员成本为5000 × 12× 30% = $18,000。
-> 
 
 都是讲简体中文的, 怎么在国内站就是5000人民币一个月, 在国际站就是5000美元一个月?
 
