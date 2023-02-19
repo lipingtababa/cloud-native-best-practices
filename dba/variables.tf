@@ -9,3 +9,9 @@ variable "image_id" {
   # default to Amazon Linux 2
   default = "ami-0c2b8ca1dad447f8a"
 }
+
+variable "vpc-id" {
+  type = string
+  # Warning, this is my VPC ID, you should change it to your own VPC ID
+  default = "vpc-0c7bb001f9bf5f5b3"
+}
