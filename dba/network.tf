@@ -2,6 +2,10 @@ resource "aws_vpc" "unbreakable-vpc" {
     cidr_block = "172.31.0.0/16"
 }
 
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.unbreakable-vpc.id
+}
+
 resource "aws_subnet" "unbreakable-subnet1" {
     vpc_id                  = aws_vpc.unbreakable-vpc.id
     cidr_block              = "172.31.1.0/24"
@@ -49,10 +53,19 @@ resource "aws_security_group_rule" "app-sg-egress-rules" {
     security_group_id = aws_security_group.unbreakable-app.id
 }
 
-resource "aws_security_group_rule" "app-sg-ingress-rules" {
+resource "aws_security_group_rule" "app-sg-ingress-rule-https" {
     type              = "ingress"
     from_port         = 443
     to_port           = 443
+    protocol          = "tcp"
+    cidr_blocks       = ["0.0.0.0/0"]
+    security_group_id = aws_security_group.unbreakable-app.id
+}
+
+resource "aws_security_group_rule" "app-sg-ingress-rule-ssh" {
+    type              = "ingress"
+    from_port         = 22
+    to_port           = 22
     protocol          = "tcp"
     cidr_blocks       = ["0.0.0.0/0"]
     security_group_id = aws_security_group.unbreakable-app.id
