@@ -12,12 +12,12 @@ resource "aws_db_instance" "unbreakable-db" {
     instance_class          = "db.m6g.large"
     db_name                 = "unbreakable"
     username                = "magong"
-    password                = "this_passwd_should_be_stored_in_remote_state"
+    password                = random_password.db_password.result
 
     delete_automated_backups    = false
     backup_retention_period     = 7
     skip_final_snapshot         = false
-    final_snapshot_identifier   = "unbreakable-db-deathbed-snapshot"
+    final_snapshot_identifier   = "unbreakable-db-deathbed-snapshot-${random_id.snapshot_suffix.hex}"
 
     db_subnet_group_name        = aws_db_subnet_group.unbreakable-db.name
     multi_az                    = true
@@ -35,4 +35,13 @@ resource "aws_db_instance" "unbreakable-db" {
     tags = {
         Name = "unbreakable-db"
     }
+}
+
+resource "random_password" "db_password" {
+    length = 32
+    special = false
+}
+
+resource "random_id" "snapshot_suffix" {
+    byte_length = 4
 }

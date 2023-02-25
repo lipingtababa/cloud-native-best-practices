@@ -36,12 +36,21 @@ resource "aws_security_group_rule" "db-sg-ingress-rules" {
     security_group_id = aws_security_group.unbreakable-db.id
 }
 
-resource "aws_security_group_rule" "app-sg-egress-rules" {
+resource "aws_security_group_rule" "app-sg-egress-rule-pg" {
     type              = "egress"
     from_port         = 5432
     to_port           = 5432
     protocol          = "tcp"
     source_security_group_id = aws_security_group.unbreakable-db.id
+    security_group_id = aws_security_group.unbreakable-app.id
+}
+
+resource "aws_security_group_rule" "app-sg-egress-rule-https" {
+    type              = "egress"
+    from_port         = 443
+    to_port           = 443
+    protocol          = "tcp"
+    cidr_blocks       = ["0.0.0.0/0"]
     security_group_id = aws_security_group.unbreakable-app.id
 }
 
